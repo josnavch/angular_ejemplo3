@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './components/encabezado/encabezado.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -29,7 +31,9 @@ import { ListaaddComponent } from './components/listaadd/listaadd.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    NgbModule
+    
 
   ],
   providers: [

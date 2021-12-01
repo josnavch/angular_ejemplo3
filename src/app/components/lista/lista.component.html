@@ -1,3 +1,4 @@
+
 <div class="alert alert-warning" role="alert" *ngFor="let item of items" role="alert">
     {{item.name}} - {{item.id}}
     <div class="float-right"
@@ -5,17 +6,18 @@
         <i class="far fa-trash-alt"></i>
     </div>
     <div class="float-right mx-3"
-        data-toggle="modal" data-target="#editModal"
         (click)="editar(item)"
+        data-toggle="modal" 
+        data-target="#exampleModal"
         type="button">
         <i class="fas fa-pencil-alt"></i>
-    </div>
+    </div>    
 </div>
 
 <!-- Modal -->
 
 <div class="modal fade" 
-    id="editModal" 
+    id="exampleModal" 
     tabindex="-1" 
     role="dialog" 
     aria-labelledby="exampleModalLabel" 
@@ -25,7 +27,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">{{editarItem.name}}</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Editar {{editarItem.name}}</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -48,3 +50,4 @@
       </div>
     </div>
   </div>
+

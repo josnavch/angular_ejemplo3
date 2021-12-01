@@ -26,13 +26,13 @@ export class ListaComponent implements OnInit {
     this.conexion.eliminarItem(item)
   }
   editar(item: any){
-    this.editarItem = item
-    console.log(this.editarItem.name, this.editarItem.id)
+    this.editarItem = item;
+    console.log(this.editarItem.name, this.editarItem.id);
   }
 
   agregarItemEditado(){
     this.conexion.editarItem(this.editarItem);
-    console.log(this.editarItem.name, this.editarItem.id)
+    console.log(this.editarItem.name, this.editarItem.id);
   }
 
   

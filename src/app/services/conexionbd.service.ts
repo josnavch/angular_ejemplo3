@@ -13,6 +13,7 @@ export class ConexionbdService {
   
   private itemsCollection: AngularFirestoreCollection<Item>;
   items: Observable<Item[]>;
+
   private itemDoc: AngularFirestoreDocument<Item> | undefined;
   
   constructor(private afs: AngularFirestore) {
@@ -42,8 +43,8 @@ export class ConexionbdService {
     this.itemDoc.delete();
   }
 
-  editarItem(item: { id: any; }){
+  editarItem(item:any){
     this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);
-    this.itemDoc.update(item.id);
+    this.itemDoc.update(item);
   }
 }
